@@ -18,7 +18,7 @@ const Navbar = () => {
                 <Link href="/">Contact</Link>
             </div>
             {/* LOGO */}
-            <div className="text-xl text-slate-300 md:font-bold flex-1 md:text-center">
+            <div className="text-xl md:text-2xl text-yellow-300 font-bold flex-1 md:text-center">
                 <Link href="/">Pizza-Burst</Link>
             </div>
             {/* MOBILE MENU */}
