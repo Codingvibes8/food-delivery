@@ -4,8 +4,10 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AuthProvider from "@/app/components/AuthProvider";
+import React from "react";
 
-const figtree = Figtree({ subsets: ["latin"] });
+const figtree: Nextfont = Figtree({ subsets: ["latin"], weight: ['400', '600', '800'] });
 
 export const metadata: Metadata = {
   title: "food-delivery-app",
@@ -20,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={figtree.className}>
+      <AuthProvider>
         <div>
           <Notification />
           <Navbar />
           {children}
           <Footer />
         </div>
+      </AuthProvider>
       </body>
     </html>
   );
